@@ -7,7 +7,7 @@
 
 [![GitHub Release](https://img.shields.io/github/v/release/FellEntertainment/FellClicker-Pro-Touch?style=for-the-badge&color=6C5CE7&logo=github)](https://github.com/FellEntertainment/FellClicker-Pro-Touch/releases)
 [![Platform](https://img.shields.io/badge/Platform-Android_8.0%2B-00E5FF?style=for-the-badge&logo=android&logoColor=white)](https://github.com/FellEntertainment/FellClicker-Pro-Touch/releases)
-[![License](https://img.shields.io/badge/License-MIT-10B981?style=for-the-badge)]()
+[![Copyright](https://img.shields.io/badge/Copyright-©_2026_Fell_Entertainment-EF4444?style=for-the-badge)](https://github.com/FellEntertainment/FellClicker-Pro-Touch)
 
 </div>
 
@@ -38,6 +38,27 @@
 3. **Erforderliche Berechtigungen erteilen:**
    * **Overlay-Berechtigung:** Erlaubt der App, das Steuer-Panel über anderen Apps einzublenden.
    * **Bedienungshilfe (Accessibility Service):** Nötig, damit die App präzise Touch-Gesten ausführen kann.
+
+---
+
+## 🔒 Datenschutz und Konfiguration
+
+FellClicker Pro Touch benötigt weder ein Konto noch eine Internetverbindung und enthält keinerlei Telemetrie. Einstellungen und Profile bleiben lokal im vom Betriebssystem vorgesehenen Benutzer-Konfigurationsordner.
+
+> **Wichtige Hinweise:**
+> * Einige Spiele mit Anti-Cheat blockieren simulierte Eingaben. FellClicker Pro Touch versucht nicht, solche Schutzsysteme zu umgehen.
+> * Automatisierung kann gegen Regeln einzelner Spiele oder Dienste verstoßen. Verwende das Programm nur dort, wo es erlaubt ist.
+> * Das physische Not-Aus-Tastenkürzel ist standardmäßig die **Leiser-Taste (Volume Down)** am Smartphone.
+
+---
+
+## 📋 Urheberrecht und Nutzung
+
+Copyright © 2026 Fell Entertainment. Alle Rechte vorbehalten.
+
+Dieses Repository ist nicht Open Source und enthält bewusst keine Open-Source-Lizenz. Der Quellcode darf auf GitHub eingesehen werden. Eine Erlaubnis zum Kopieren, Verändern, Weiterveröffentlichen, Weiterverteilen oder Übernehmen in andere Projekte wird nicht erteilt. Davon unberührt bleiben zwingende gesetzliche Rechte und die für öffentliche Repositories geltenden GitHub-Nutzungsbedingungen.
+
+Die von Fell Entertainment offiziell veröffentlichten, unveränderten Releases dürfen heruntergeladen, installiert und bestimmungsgemäß verwendet werden.
 
 ---
 
