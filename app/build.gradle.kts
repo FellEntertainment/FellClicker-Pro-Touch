@@ -17,11 +17,22 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+        setProperty("archivesBaseName", "FellClicker-Pro-Touch-v$versionName")
+    }
+
+    signingConfigs {
+        create("release") {
+            storeFile = file("fell-release-key.jks")
+            storePassword = System.getenv("KEYSTORE_PASSWORD") ?: "FellClicker2026"
+            keyAlias = System.getenv("KEY_ALIAS") ?: "fellkey"
+            keyPassword = System.getenv("KEY_PASSWORD") ?: "FellClicker2026"
+        }
     }
 
     buildTypes {
         release {
             isMinifyEnabled = false
+            signingConfig = signingConfigs.getByName("release")
         }
     }
 

@@ -1,9 +1,12 @@
-name: Build FellClicker Pro Touch APK
+name: Build & Release FellClicker Pro Touch
 
 on:
   push:
     branches: [ "main", "master" ]
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -24,11 +27,28 @@ jobs:
         with:
           gradle-version: '8.7'
 
-      - name: Debug-APK kompilieren
-        run: gradle assembleDebug --stacktrace
+      - name: Signierte Release-APK kompilieren
+        run: gradle assembleRelease --stacktrace
 
-      - name: Fertige APK als Download bereitstellen
+      - name: APK umbenennen für sauberen Download
+        run: cp app/build/outputs/apk/release/*.apk FellClicker-Pro-Touch-v1.0.0.apk
+
+      - name: Als Artifact bereitstellen
         uses: actions/upload-artifact@v4
         with:
-          name: FellClicker-Pro-Touch-APK
-          path: app/build/outputs/apk/debug/app-debug.apk
+          name: FellClicker-Pro-Touch-v1.0.0
+          path: FellClicker-Pro-Touch-v1.0.0.apk
+
+      - name: Offizielles GitHub Release veröffentlichen
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v1.0.0
+          name: "FellClicker Pro Touch v1.0.0"
+          body: |
+            ### FellClicker Pro Touch v1.0.0 (Official Android Release)
+            - **Dark-Theme UI** im originalen FellClicker Pro Design
+            - **Touch-Target Picker:** Direktes Antippen der gewünschten Klick-Position auf dem Bildschirm (`🎯 Ziel antippen`)
+            - **Doppelklick-Stopp & Hardware-Not-Aus:** 2x schnell auf das Overlay tippen oder `Leiser`-Taste drücken stoppt sofort
+            - **Intervall, Randomizer & Sicherheits-Limits**
+          files: FellClicker-Pro-Touch-v1.0.0.apk
+          prerelease: false

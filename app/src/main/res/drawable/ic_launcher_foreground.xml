@@ -1,0 +1,52 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Äußerer Neon-Wellenring (Violett) -->
+    <path
+        android:pathData="M29,63 A26,26 0 1,1 67,27"
+        android:strokeWidth="3.2"
+        android:strokeColor="#A855F7"
+        android:strokeLineCap="round" />
+
+    <!-- Mittlerer Neon-Wellenring (Violett-Blau) -->
+    <path
+        android:pathData="M34,59 A19,19 0 1,1 61,33"
+        android:strokeWidth="3.2"
+        android:strokeColor="#6366F1"
+        android:strokeLineCap="round" />
+
+    <!-- Innerer Touch-Pulsring (Cyan) -->
+    <path
+        android:pathData="M40,54 A12,12 0 1,1 56,39"
+        android:strokeWidth="3.5"
+        android:strokeColor="#00E5FF"
+        android:strokeLineCap="round" />
+
+    <!-- Dunkler 3D-Kern des Blitz-Pointers -->
+    <path
+        android:fillColor="#12121A"
+        android:pathData="M46,42 L49,73 L56,66 L61,75 L57,80 L63,89 L71,74 L65,71 L70,63 L61,61 L74,58 Z" />
+
+    <!-- Leuchtender Neon-Rahmen (Cyan zu Violett Verlauf) -->
+    <path
+        android:pathData="M46,42 L49,73 L56,66 L61,75 L57,80 L63,89 L71,74 L65,71 L70,63 L61,61 L74,58 Z"
+        android:strokeWidth="2.6"
+        android:strokeLineJoin="miter">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:startX="46"
+                android:startY="42"
+                android:endX="68"
+                android:endY="89"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#00E5FF" />
+                <item android:offset="0.5" android:color="#3B82F6" />
+                <item android:offset="1.0" android:color="#C026D3" />
+            </gradient>
+        </aapt:attr>
+    </path>
+</vector>
