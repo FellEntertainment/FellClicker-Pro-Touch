@@ -22,6 +22,20 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
+      - name: Offiziellen Release-Keystore generieren
+        run: |
+          if [ ! -f app/fell-release-key.jks ]; then
+            keytool -genkeypair -v \
+              -keystore app/fell-release-key.jks \
+              -alias fellkey \
+              -keyalg RSA \
+              -keysize 2048 \
+              -validity 10000 \
+              -storepass FellClicker2026 \
+              -keypass FellClicker2026 \
+              -dname "CN=FellEntertainment, O=FellEntertainment, C=DE"
+          fi
+
       - name: Gradle 8.7 einrichten
         uses: gradle/actions/setup-gradle@v4
         with:
